@@ -1,6 +1,6 @@
 {
   "name": "deparam",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "$.param reverse function",
   "main": "src/deparam.js",
   "scripts": {
