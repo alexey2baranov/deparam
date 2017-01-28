@@ -1,6 +1,6 @@
 # deparam()
 
-'$.param()' reverse function without dependencies. Supports array-parameters and object-parameters with infinite nesting
+A `$.param()` reverse function without dependencies. Supports array-parameters and object-parameters with infinite nesting.
 An extracted and refactored deparam method from Ben Alman's jQuery BBQ
 
 ##tests
@@ -31,4 +31,7 @@ An extracted and refactored deparam method from Ben Alman's jQuery BBQ
     var target2= deparam(decodeURIComponent($.param(target)))
 
     expect(target2).eql(target)
+  })
 ```
+##installation
+> npm i deparam
