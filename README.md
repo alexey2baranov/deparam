@@ -35,7 +35,9 @@ An extracted and refactored deparam method from Ben Alman's jQuery BBQ
 ```
 ##installation
 > npm i deparam
+
 ##usage
+
 ```
 var deparam = require("deparam")
 var query= "a=1&b=qwerty"
