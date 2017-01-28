@@ -1,7 +1,7 @@
 {
   "name": "deparam",
-  "version": "1.0.4",
-  "description": "$.param reverse function",
+  "version": "1.0.5",
+  "description": "$.param() reverse function",
   "main": "src/deparam.js",
   "scripts": {
     "test": "karma start"
