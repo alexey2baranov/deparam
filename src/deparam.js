@@ -7,6 +7,7 @@
  */
 
 module.exports=function (params, coerce) {
+  console.log(params)
   var obj = {},
     coerce_types = {'true': !0, 'false': !1, 'null': null};
 
