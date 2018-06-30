@@ -5,11 +5,13 @@
  An extraction of the deparam method from Ben Alman's jQuery BBQ
  http://benalman.com/projects/jquery-bbq-plugin/
  */
+module.exports = function(params, coerce) {
+  var obj = {};
+  var coerce_types = { 'true': !0, 'false': !1, 'null': null };
 
-module.exports=function (params, coerce) {
-  // console.log(params)
-  var obj = {},
-    coerce_types = {'true': !0, 'false': !1, 'null': null};
+  if (!params) {
+    return obj;
+  }
 
   // Iterate over all name=value pairs.
   params.replace(/\+/g, ' ').split('&').forEach(function (v, j) {
@@ -72,8 +74,7 @@ module.exports=function (params, coerce) {
       } else {
         // Simple key, even simpler rules, since only scalars and shallow
         // arrays are allowed.
-
-        if (typeof obj[key]=="array") {
+        if (typeof obj[key] === 'array') {
           // val is already an array, so push on the next value.
           obj[key].push(val);
 
@@ -90,9 +91,7 @@ module.exports=function (params, coerce) {
 
     } else if (key) {
       // No value was defined, so set something meaningful.
-      obj[key] = coerce
-        ? undefined
-        : '';
+      obj[key] = coerce ? undefined : '';
     }
   });
 
