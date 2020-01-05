@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Created by alexey2baranov on 28.01.17.
  */
@@ -8,7 +10,7 @@
 
 const coerce_types = {'true': !0, 'false': !1, 'null': null};
 
-export default function (params, coerce) {
+function deparam (params, coerce) {
   // console.log(params)
   const obj = {};
 
@@ -98,3 +100,5 @@ export default function (params, coerce) {
 
   return obj;
 }
+
+module.exports = deparam;
