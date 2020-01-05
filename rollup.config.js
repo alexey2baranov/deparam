@@ -28,5 +28,6 @@ function getRollupObject ({format = 'umd'} = {}) {
 
 export default [
   getRollupObject({format: 'umd'}),
+  getRollupObject({format: 'cjs'}),
   getRollupObject({format: 'esm'})
 ];

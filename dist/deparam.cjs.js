@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Created by alexey2baranov on 28.01.17.
  */
@@ -99,4 +101,4 @@ function deparam (params, coerce) {
   return obj;
 }
 
-export default deparam;
+module.exports = deparam;

@@ -40,8 +40,8 @@ export default function (params, coerce) {
     }
 
     // Are we dealing with a name=value pair, or just a name?
-    if (param.length === 2) {
-      let val = decodeURIComponent(param[1]);
+    if (param.length >= 2) {
+      let val = decodeURIComponent(param.slice(1).join('='));
 
       // Coerce values.
       if (coerce) {
